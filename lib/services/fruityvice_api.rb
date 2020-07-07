@@ -6,9 +6,6 @@ class FruityviceAPI
   end
 
   def make_fruits
-    get_fruits.each do |fruit|
-      # binding.pry
-      Fruit.new_from_api(fruit["name"], fruit["nutritions"]["calories"])
-    end
+    Fruit.new_from_api(get_fruits)
   end
 end
