@@ -1,5 +1,7 @@
 require 'httparty'
 require 'pry'
+require 'json'
+
 
 require_relative '../lib/models/fruit.rb'
 require_relative '../lib/services/cli.rb'
