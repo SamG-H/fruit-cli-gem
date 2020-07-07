@@ -1,2 +1,2 @@
-#Fruit
-##A gem utilizing the fruityvice api to access information on different fruits
+# Fruit
+## A gem utilizing the fruityvice api to access information on different fruits
