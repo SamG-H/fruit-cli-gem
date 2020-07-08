@@ -1,7 +1,7 @@
 require_relative 'lib/fruit/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "fruit"
+  spec.name          = "fruit-info"
   spec.version       = Fruit::VERSION
   spec.authors       = ["Samuel Grasse-Haroldsen"]
   spec.email         = ["sgrasseharoldsen@gmail.com"]
