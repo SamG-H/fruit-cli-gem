@@ -34,11 +34,18 @@ class CLI
   end
 
   def display_the_most
-    puts "\nMost carbohydrates: #{Fruit.max("carbohydrates").name} @ #{Fruit.max("carbohydrates").nutritions["carbohydrates"]}g".colorize(Fruit.max("carbohydrates").color)
-    puts "Most protein: #{Fruit.max("protein").name} @ #{Fruit.max("protein").nutritions["protein"]}g".colorize(Fruit.max("protein").color)
-    puts "Most fat: #{Fruit.max("fat").name} @ #{Fruit.max("fat").nutritions["fat"]}g".colorize(Fruit.max("fat").color)
-    puts "Most calories: #{Fruit.max("calories").name} @ #{Fruit.max("calories").nutritions["calories"]}g".colorize(Fruit.max("calories").color)
-    puts "Most sugar: #{Fruit.max("sugar").name} @ #{Fruit.max("sugar").nutritions["sugar"]}g\n\n".colorize(Fruit.max("sugar").color)
+    puts "\nThe fruits with the most nutrition per 100g".colorize(:cyan)
+    most_carb = Fruit.max("carbohydrates")
+    most_protein = Fruit.max("protein")
+    most_fat = Fruit.max("fat")
+    most_calories = Fruit.max("calories")
+    most_sugar = Fruit.max("sugar")
+    
+    puts "\nMost carbohydrates: #{most_carb.name} @ #{most_carb.nutritions["carbohydrates"]}".colorize(most_carb.color)
+    puts "Most protein: #{most_protein.name} @ #{most_protein.nutritions["protein"]}".colorize(most_protein.color)
+    puts "Most fat: #{most_fat.name} @ #{most_fat.nutritions["fat"]}".colorize(most_fat.color)
+    puts "Most calories: #{most_calories.name} @ #{most_calories.nutritions["calories"]}".colorize(most_calories.color)
+    puts "Most sugar: #{most_sugar.name} @ #{most_sugar.nutritions["sugar"]}\n".colorize(most_sugar.color)
   end
 
   def display_one_fruit(fruit)
