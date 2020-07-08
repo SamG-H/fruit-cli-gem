@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "A gem utilizing the fruityvice api"
   spec.description   = "Gives information on several fruits and their nutritional value."
-  spec.homepage      = "https://rubygems.org/"
+  spec.homepage      = "https://github.com/SamG-H/fruit-cli-gem"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
