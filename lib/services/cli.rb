@@ -5,11 +5,12 @@ class CLI
     input = nil
     while input != 'q'
       puts "Press " + "a".red + " to see all fruit"
-      puts "Press " + "s".red + " to see all fruit with their scientific names"
-      puts "Press " + "n".red + " to see all fruit with their nutrional information"
-      puts "Press " + "m".red + " to see all fruit with their nutrional information"
-      puts "Type the " + "name of a fruit ".red + "to see all of its information"
-      puts "Press " + "q".red + " to quit\n"
+      puts "Press " + "s".yellow + " to see all fruit listed with their scientific names"
+      puts "Press " + "n".light_yellow + " to see all fruit listed with their nutrional information"
+      puts "Press " + "m".green + " to see the fruits with most nutrition"
+      puts "Press " + "l".cyan + " to see the fruits with least nutrition"
+      puts "Type the " + "name of a fruit ".blue + "to see all of its information"
+      puts "Press " + "q".magenta + " to quit\n"
       print "What would you like to do: "
       input = gets.strip.downcase
       case input
@@ -29,7 +30,7 @@ class CLI
         if Fruit.all.find { |fruit| fruit.name.downcase == input} != nil
           display_one_fruit(Fruit.all.find { |fruit| fruit.name.downcase == input})
         else
-          puts "\nNot a valid option or fruit\n".red
+          puts "\nNot a valid option or fruit in database\n".red
         end
       end
     end
