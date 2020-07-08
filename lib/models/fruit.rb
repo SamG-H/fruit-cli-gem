@@ -1,48 +1,53 @@
+# frozen_string_literal: false
+
+# a class to hold the fruits information inculding a hash of nutritional facts
 class Fruit
-  attr_accessor :genus, :name, :id, :family, :order, :nutritions, :color 
+  attr_accessor :genus, :name, :id, :family, :order, :nutritions, :color
   @@all = []
   def initialize(attributes)
-    attributes.each { |k, v| self.send("#{k}=", v) }
-    self.add_color
+    attributes.each { |k, v| send("#{k}=", v) }
+    add_color
     @@all << self
   end
 
   def self.max(element)
-    self.all.max { |a, b| a.nutritions[element] <=> b.nutritions[element]}
+    all.max { |a, b| a.nutritions[element] <=> b.nutritions[element] }
   end
 
   def self.min(element)
-    self.all.min { |a, b| a.nutritions[element] <=> b.nutritions[element]}
+    all.min { |a, b| a.nutritions[element] <=> b.nutritions[element] }
   end
 
   def add_color
-    case self.name
-    when "Banana"
+    case name
+    when 'Banana'
       self.color = :light_yellow
-    when "Blueberry"
+    when 'Blueberry'
       self.color = :blue
-    when "Cherry"
+    when 'Cherry'
       self.color = :red
-    when "Apple"
+    when 'Apple'
       self.color = :green
-    when "Lemon"
+    when 'Lemon'
       self.color = :light_yellow
-    when "Mango"
+    when 'Mango'
       self.color = :yellow
-    when "Orange"
+    when 'Orange'
       self.color = :yellow
-    when "Pear"
+    when 'Pear'
       self.color = :green
-    when "Pineapple"
+    when 'Pineapple'
       self.color = :light_yellow
-    when "Raspberry"
+    when 'Raspberry'
       self.color = :light_red
-    when "Strawberry"
+    when 'Strawberry'
       self.color = :red
-    when "Tomato"
+    when 'Tomato'
       self.color = :red
-    when "Watermelon"
+    when 'Watermelon'
       self.color = :light_green
+    else
+      self.color = :white
     end
   end
 
@@ -51,6 +56,6 @@ class Fruit
   end
 
   def self.new_from_api(fruits)
-    fruits.each { |fruit| self.new(fruit) }
+    fruits.each { |fruit| new(fruit) }
   end
 end
