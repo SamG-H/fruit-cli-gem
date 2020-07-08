@@ -7,6 +7,10 @@ class Fruit
     @@all << self
   end
 
+  def self.max(element)
+    self.all.max { |a, b| a.nutritions[element] <=> b.nutritions[element]}
+  end
+
   def add_color
     case self.name
     when "Banana"
