@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sgrasseharoldsen@gmail.com"]
 
   spec.summary       = "A gem utilizing the fruityvice api"
-  spec.description   = "Gives information on several fruits and their nutritional value."
+  spec.description   = "Gives information on the nutrional value of several fruits."
   spec.homepage      = "https://github.com/SamG-H/fruit-cli-gem"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
@@ -17,8 +17,9 @@ Gem::Specification.new do |spec|
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
-  spec.bindir        = "exe"
+  spec.bindir        = "bin"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables  << 'fruit-info' 
   spec.require_paths = ["lib"]
   spec.add_dependency "httparty"
   spec.add_dependency "colorize"

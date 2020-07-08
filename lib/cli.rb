@@ -1,6 +1,7 @@
 # frozen_string_literal: false
 
 # displays a menu and loops menu until user inputs q
+require_relative '../config/environment'
 class CLI
   def call
     FruityviceAPI.new.make_fruits

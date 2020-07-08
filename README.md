@@ -1,5 +1,10 @@
 # Fruit
-## A gem utilizing the fruityvice api. 
-### Gives information on several fruits and their nutritional value. 
-### Run gem install fruit and run bin/fruit to access the cli.
+### Gives nutritional information on several fruits by utilizing the fruityvice api. 
+## Installation
+  $ gem install fruit
+## Usage
+  $ bin/fruit 
+## License
+  The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
   
