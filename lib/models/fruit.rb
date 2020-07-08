@@ -11,6 +11,10 @@ class Fruit
     self.all.max { |a, b| a.nutritions[element] <=> b.nutritions[element]}
   end
 
+  def self.min(element)
+    self.all.min { |a, b| a.nutritions[element] <=> b.nutritions[element]}
+  end
+
   def add_color
     case self.name
     when "Banana"
