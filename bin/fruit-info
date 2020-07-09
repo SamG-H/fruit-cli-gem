@@ -4,4 +4,4 @@
 
 require_relative '../config/environment'
 
-CLI.new.call
+FruitInfo::CLI.new.call
