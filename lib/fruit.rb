@@ -21,6 +21,8 @@ module FruitInfo
 
     def add_color
       case name
+      when 'Apricot'
+        self.color = :yellow
       when 'Banana'
         self.color = :light_yellow
       when 'Blueberry'
