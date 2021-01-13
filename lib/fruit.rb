@@ -49,6 +49,8 @@ module FruitInfo
         self.color = :red
       when 'Watermelon'
         self.color = :light_green
+      when 'Guava'
+        self.color = :light_green
       else
         self.color = :white
       end
